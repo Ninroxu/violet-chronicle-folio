@@ -59,7 +59,7 @@ const Projects = () => {
         {/* Featured Projects */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {featuredProjects.map((project, index) => (
-            <Card key={index} className="group hover:shadow-glow transition-all duration-300 overflow-hidden">
+            <Card key={index} className="group glass-card hover:shadow-glow transition-all duration-300 overflow-hidden">
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
@@ -113,7 +113,7 @@ const Projects = () => {
         
         <div className="grid md:grid-cols-2 gap-6">
           {otherProjects.map((project, index) => (
-            <Card key={index} className="group hover:shadow-card transition-all duration-300">
+            <Card key={index} className="group glass-card hover:shadow-glow transition-all duration-300">
               <div className="flex">
                 <img
                   src={project.image}

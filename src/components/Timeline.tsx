@@ -52,7 +52,7 @@ const Timeline = () => {
               {/* Timeline dot */}
               <div className="absolute left-3 md:left-auto md:right-[-0.5rem] top-6 w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg md:transform md:translate-x-1/2" />
               
-              <Card className="ml-12 md:ml-0 shadow-card hover:shadow-glow transition-all duration-300 group">
+              <Card className="ml-12 md:ml-0 glass-card hover:shadow-glow transition-all duration-300 group">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <Badge variant="secondary" className="text-lg px-4 py-1">

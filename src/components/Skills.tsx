@@ -53,7 +53,7 @@ const Skills = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillsData.map((skillSet, index) => (
-            <Card key={index} className="group hover:shadow-glow transition-all duration-300 hover:-translate-y-2">
+            <Card key={index} className="group glass-card hover:shadow-glow transition-all duration-300 hover:-translate-y-2">
               <CardHeader className="text-center pb-4">
                 <div className={`mx-auto mb-4 p-4 rounded-full bg-gradient-primary text-white group-hover:animate-glow transition-all duration-300`}>
                   {skillSet.icon}
@@ -68,7 +68,7 @@ const Skills = () => {
                   {skillSet.skills.map((skill, skillIndex) => (
                     <span
                       key={skillIndex}
-                      className="px-3 py-1 text-sm bg-background text-foreground rounded-full border border-border hover:border-primary hover:text-primary transition-all duration-200 cursor-default"
+                      className="px-3 py-1 text-sm glass-card text-foreground rounded-full border border-border/30 hover:border-primary hover:text-primary transition-all duration-200 cursor-default"
                     >
                       {skill}
                     </span>

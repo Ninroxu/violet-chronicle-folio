@@ -28,7 +28,7 @@ const Contact = () => {
             </div>
 
             <div className="space-y-6">
-              <Card className="hover:shadow-card transition-shadow duration-300">
+              <Card className="glass-card hover:shadow-glow transition-shadow duration-300">
                 <CardContent className="flex items-center p-6">
                   <div className="p-3 bg-gradient-primary text-white rounded-lg mr-4">
                     <Mail className="w-6 h-6" />
@@ -40,7 +40,7 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card className="hover:shadow-card transition-shadow duration-300">
+              <Card className="glass-card hover:shadow-glow transition-shadow duration-300">
                 <CardContent className="flex items-center p-6">
                   <div className="p-3 bg-gradient-primary text-white rounded-lg mr-4">
                     <Phone className="w-6 h-6" />
@@ -52,7 +52,7 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card className="hover:shadow-card transition-shadow duration-300">
+              <Card className="glass-card hover:shadow-glow transition-shadow duration-300">
                 <CardContent className="flex items-center p-6">
                   <div className="p-3 bg-gradient-primary text-white rounded-lg mr-4">
                     <MapPin className="w-6 h-6" />
@@ -67,7 +67,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <Card className="shadow-glow">
+          <Card className="glass-card shadow-glow">
             <CardHeader>
               <CardTitle className="text-2xl text-foreground">Send a Message</CardTitle>
             </CardHeader>
