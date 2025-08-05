@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+				'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -72,12 +76,27 @@ export default {
 			},
 			boxShadow: {
 				'glow': 'var(--shadow-glow)',
-				'card': 'var(--shadow-card)'
+				'card': 'var(--shadow-card)',
+				'apple': '0 4px 16px rgba(0, 0, 0, 0.12)',
+				'apple-lg': '0 8px 24px rgba(0, 0, 0, 0.15)',
+				'apple-xl': '0 16px 48px rgba(0, 0, 0, 0.18)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				sm: 'calc(var(--radius) - 4px)',
+				'apple': '16px',
+				'apple-lg': '24px'
+			},
+			spacing: {
+				'18': '4.5rem',
+				'22': '5.5rem',
+				'26': '6.5rem',
+				'30': '7.5rem'
+			},
+			fontSize: {
+				'display': ['4.5rem', { lineHeight: '1.1', fontWeight: '700' }],
+				'display-sm': ['3.5rem', { lineHeight: '1.1', fontWeight: '700' }],
 			},
 			keyframes: {
 				'accordion-down': {
@@ -99,27 +118,47 @@ export default {
 				'fade-up': {
 					'0%': {
 						opacity: '0',
-						transform: 'translateY(20px)'
+						transform: 'translateY(24px)'
 					},
 					'100%': {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
 				},
+				'fade-in': {
+					'0%': {
+						opacity: '0'
+					},
+					'100%': {
+						opacity: '1'
+					}
+				},
+				'scale-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'scale(0.95)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					}
+				},
 				'glow': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px hsl(var(--purple-glow) / 0.5)'
+						boxShadow: '0 0 20px hsl(var(--purple-glow) / 0.3)'
 					},
 					'50%': {
-						boxShadow: '0 0 30px hsl(var(--purple-glow) / 0.8)'
+						boxShadow: '0 0 30px hsl(var(--purple-glow) / 0.5)'
 					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-up': 'fade-up 0.6s ease-out',
-				'glow': 'glow 2s ease-in-out infinite alternate'
+				'fade-up': 'fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
+				'fade-in': 'fade-in 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+				'scale-in': 'scale-in 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+				'glow': 'glow 3s ease-in-out infinite alternate'
 			}
 		}
 	},

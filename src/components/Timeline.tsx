@@ -34,52 +34,58 @@ const timelineData = [
 
 const Timeline = () => {
   return (
-    <section className="py-20 px-6 bg-gradient-to-br from-background to-secondary">
+    <section className="py-32 px-6">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Career Timeline</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            My professional journey through the world of software development
+        <div className="text-center mb-24">
+          <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6 tracking-tight">Experience</h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light">
+            My journey through the world of software development
           </p>
         </div>
         
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-primary transform md:-translate-x-1/2" />
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border transform md:-translate-x-1/2" />
           
           {timelineData.map((item, index) => (
-            <div key={index} className={`relative mb-12 ${index % 2 === 0 ? 'md:ml-auto md:pl-8' : 'md:mr-auto md:pr-8'} md:w-1/2`}>
+            <div key={index} className={`relative mb-16 ${index % 2 === 0 ? 'md:ml-auto md:pl-12' : 'md:mr-auto md:pr-12'} md:w-1/2`}>
               {/* Timeline dot */}
-              <div className="absolute left-3 md:left-auto md:right-[-0.5rem] top-6 w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg md:transform md:translate-x-1/2" />
+              <div className="absolute left-3.5 md:left-auto md:right-[-0.25rem] top-8 w-2 h-2 bg-primary rounded-full md:transform md:translate-x-1/2" />
               
-              <Card className="ml-12 md:ml-0 glass-card hover:shadow-glow transition-all duration-300 group">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <Badge variant="secondary" className="text-lg px-4 py-1">
+              <Card className="ml-12 md:ml-0 glass-card rounded-apple p-8 group">
+                <div className="space-y-6">
+                  <div className="flex items-center gap-3">
+                    <Badge variant="secondary" className="text-sm px-3 py-1 rounded-lg font-medium">
                       {item.year}
                     </Badge>
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    {item.title}
-                  </h3>
+                  <div className="space-y-3">
+                    <h3 className="text-2xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
+                      {item.title}
+                    </h3>
+                    
+                    <h4 className="text-lg font-medium text-primary">
+                      {item.company}
+                    </h4>
+                    
+                    <p className="text-muted-foreground leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
                   
-                  <h4 className="text-lg font-semibold text-primary mb-4">
-                    {item.company}
-                  </h4>
-                  
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    {item.description}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 pt-2">
                     {item.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="outline" className="hover:bg-primary hover:text-primary-foreground transition-colors">
+                      <Badge 
+                        key={techIndex} 
+                        variant="outline" 
+                        className="rounded-lg border-border/50 hover:border-primary hover:text-primary transition-colors duration-200"
+                      >
                         {tech}
                       </Badge>
                     ))}
                   </div>
-                </CardContent>
+                </div>
               </Card>
             </div>
           ))}
